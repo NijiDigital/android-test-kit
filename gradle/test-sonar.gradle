@@ -1,0 +1,27 @@
+sonarqube {
+    androidVariant 'debug'
+    properties {
+
+        // Sources
+        property "sonar.sources", "src/main"
+        property "sonar.java.binaries", "${project.buildDir}/intermediates/javac/debug,build/tmp/kotlin-classes/debug"
+
+        // Test
+        // property "sonar.tests", "src/test"//,app/src/androidTest"
+        // https://github.com/SonarOpenCommunity/sonar-cxx/wiki/FAQ
+        property "sonar.junit.reportPaths", "${project.buildDir}/test-results/testDebugUnitTest"
+
+        // Detekt
+        // KtLint
+        property "detekt.sonar.kotlin.config.path", "${rootProject.projectDir}/config/detekt/detekt-config-ide.yml"
+        property "sonar.kotlin.detekt.reportPaths", "${project.buildDir}/reports/detekt/detekt-report.xml"
+
+        // Android Lint
+        property "sonar.androidLint.reportPaths", "${project.buildDir}/reports/lint/lint-report.xml"
+
+        // Code Coverage
+        property "sonar.java.coveragePlugin", "jacoco"
+        property "sonar.coverage.exclusions", "src/test/**,src/androidTest/**,src/main/res/**"
+        property "sonar.coverage.jacoco.xmlReportPaths", "${project.buildDir}/reports/jacoco/jacocoTestDebugUnitTestReport/jacocoTestDebugUnitTestReport.xml"
+    }
+}

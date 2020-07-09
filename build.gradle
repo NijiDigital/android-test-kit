@@ -1,0 +1,25 @@
+// Module setup
+apply from: "$rootProject.projectDir/app/gradle/module.gradle"
+
+// Config
+android {
+    defaultConfig {
+        versionCode 1
+        versionName "1.0"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+    testOptions {
+        unitTests.all {
+            enabled false
+        }
+    }
+}
+
+// Functional dependencies
+dependencies {
+    // Archi
+    api project(":arch")
+}
+
+// Test dependencies
+apply from: "./gradle/test-dependencies.gradle"

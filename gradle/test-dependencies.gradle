@@ -1,0 +1,25 @@
+dependencies {
+    // Testing
+    api "androidx.annotation:annotation:1.1.0"
+    api "junit:junit:4.12"
+
+    // Unit testing
+    api 'pl.pragmatists:JUnitParams:1.1.1'
+    api 'com.github.dakusui:jcunit:0.8.12'
+    api 'com.carrotsearch.randomizedtesting:randomizedtesting-runner:2.1.13'
+
+    // Mock
+    api "io.mockk:mockk:1.9.3"
+
+    // Assert
+    api "org.assertj:assertj-core:3.12.2"
+
+    // Toothpick
+    api "com.github.stephanenicolas.toothpick:toothpick-testing:$rootProject.depToothpickVersion"
+    api "com.github.stephanenicolas.toothpick:toothpick-testing-junit4:$rootProject.depToothpickVersion"
+
+    // Joda for testing Date wo context
+    api 'joda-time:joda-time:2.10.3'
+
+    lintChecks project(":lint-kit")
+}

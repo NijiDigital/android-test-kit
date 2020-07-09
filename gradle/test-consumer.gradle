@@ -1,0 +1,60 @@
+///////////////////////////////////////////////////////////////////////////
+// JACOCO
+///////////////////////////////////////////////////////////////////////////
+
+def localTestCoverageEnabled = true
+try {
+    Properties properties = new Properties()
+    properties.load(project.rootProject.file('local.properties').newDataInputStream())
+    localTestCoverageEnabled = properties.getProperty('build.testCoverageEnabled', "true").toBoolean()
+} catch (IOException e) {}
+
+if (localTestCoverageEnabled) {
+
+    apply plugin: 'jacoco-android'
+
+    // JaCoCo settings
+    jacoco {
+        toolVersion = '0.8.5'
+        reportsDir = file("$buildDir/reports/jacoco")
+    }
+
+} else {
+    project.logger.lifecycle('Jacoco has been disabled to speedup the build. This is intended to be setup only on Dev IDE')
+}
+
+///////////////////////////////////////////////////////////////////////////
+// ANDROID
+///////////////////////////////////////////////////////////////////////////
+
+android {
+    sourceSets {
+        test {
+            java {
+                srcDirs += 'src/test/kotlin'
+            }
+        }
+    }
+
+    testOptions {
+        unitTests {
+            // Warning : this option allow to test without mocking android sdk. Required for logging during test
+            // https://google.github.io/android-gradle-dsl/current/com.android.build.gradle.internal.dsl.TestOptions.UnitTestOptions.html
+            returnDefaultValues = true
+            includeAndroidResources = true
+            // BUG : Report custom setup doesn't work https://issuetracker.google.com/issues/37132023
+            // reportDir "$rootDir//reports/junit/test-reports"
+            // resultsDir "$rootDir/reports/junit/test-results"
+            all {
+                maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+                forkEvery = 20
+            }
+        }
+        buildTypes {
+            debug {
+                testCoverageEnabled localTestCoverageEnabled
+            }
+        }
+    }
+}
+
