@@ -41,4 +41,3 @@ class TimberConsoleRule : TestRule {
         }
     }
 }
-

@@ -72,7 +72,7 @@ android {
                 'PluralsCandidate', // Generation is done from POEditor, case to case exception is hard
                 'UnusedIds'
         warningsAsErrors true
-        lintConfig file("${rootProject.projectDir}/config/lint/lint-config.xml")
+        lintConfig file("${rootProject.projectDir}/base/test-kit/config/lint/lint-config.xml")
     }
 }
 

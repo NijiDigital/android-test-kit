@@ -4,7 +4,7 @@ import android.util.Log
 import org.intellij.lang.annotations.Language
 import timber.log.Timber
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
 import java.util.regex.Pattern
 
 class ConsoleTree : Timber.DebugTree() {

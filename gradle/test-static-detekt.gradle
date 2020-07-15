@@ -14,7 +14,7 @@ dependencies {
 
 // Settings
 detekt {
-    config = files("${rootProject.projectDir}/config/detekt/detekt-config-ide.yml")
+    config = files("${rootProject.projectDir}/base/test-kit/config/detekt/detekt-config.yml")
     buildUponDefaultConfig = false
     disableDefaultRuleSets = false
     input = files(

@@ -1,7 +1,7 @@
 package fr.niji.mobile.android.socle.test
 
 import fr.niji.mobile.android.socle.test.rule.RxAndroidSchedulersRule
-import io.reactivex.schedulers.TestScheduler
+import io.reactivex.rxjava3.schedulers.TestScheduler
 import org.junit.Rule
 
 open class RxTestSchedulerBaseUnitTest : BaseUnitTest() {

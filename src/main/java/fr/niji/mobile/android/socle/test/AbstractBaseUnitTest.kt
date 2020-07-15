@@ -2,7 +2,7 @@ package fr.niji.mobile.android.socle.test
 
 import java.io.File
 
-abstract class AbstractBaseUnitTest {
+open class AbstractBaseUnitTest {
 
     ///////////////////////////////////////////////////////////////////////////
     // CONST
