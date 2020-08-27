@@ -9,10 +9,10 @@ dependencies {
     api 'com.carrotsearch.randomizedtesting:randomizedtesting-runner:2.1.13'
 
     // Mock
-    api "io.mockk:mockk:1.9.3"
+    api "io.mockk:mockk:1.10.0"
 
     // Assert
-    api "org.assertj:assertj-core:3.12.2"
+    api "org.assertj:assertj-core:3.16.1"
 
     // Toothpick
     api "com.github.stephanenicolas.toothpick:toothpick-testing:$rootProject.depToothpickVersion"

@@ -1,5 +1,5 @@
 // Module setup
-apply from: "$rootProject.projectDir/app/gradle/module.gradle"
+apply from: "$rootProject.projectDir/base/arch/gradle/module-consumer.gradle"
 
 // Config
 android {
