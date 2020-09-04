@@ -13,7 +13,7 @@ sonarqube {
 
         // Detekt
         // KtLint
-        property "detekt.sonar.kotlin.config.path", "${rootProject.projectDir}/config/detekt/detekt-config-ide.yml"
+        property "detekt.sonar.kotlin.config.path", "${rootProject.projectDir}/base/test-kit/config/detekt/detekt-config.yml"
         property "sonar.kotlin.detekt.reportPaths", "${project.buildDir}/reports/detekt/detekt-report.xml"
 
         // Android Lint
