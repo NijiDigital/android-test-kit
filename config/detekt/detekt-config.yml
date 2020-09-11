@@ -34,9 +34,9 @@ console-reports:
 output-reports:
   active: true
   exclude:
-    # - 'TxtOutputReport'
-    - 'XmlOutputReport'
-    - 'HtmlOutputReport'
+    - 'TxtOutputReport'
+    # - 'XmlOutputReport'
+    # - 'HtmlOutputReport'
 
 comments:
   active: true
