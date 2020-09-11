@@ -27,6 +27,9 @@ detekt {
     debug = false
     autoCorrect = false
     ignoreFailures = false
+    ignoredBuildTypes = ["release", "Test"]                       // Android: Don't create tasks for the specified build types (e.g. "release")
+    ignoredFlavors = ["prod","leMaineLibre","Push"]                       // Android: Don't create tasks for the specified build flavor (e.g. "production")
+//    ignoredVariants = ["productionRelease"]
     reports {
         xml {
             enabled = true
