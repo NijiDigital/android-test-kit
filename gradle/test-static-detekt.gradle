@@ -27,8 +27,8 @@ detekt {
     debug = false
     autoCorrect = false
     ignoreFailures = false
-    ignoredBuildTypes = ["release", "Test"]                       // Android: Don't create tasks for the specified build types (e.g. "release")
-    ignoredFlavors = ["prod","leMaineLibre","Push"]                       // Android: Don't create tasks for the specified build flavor (e.g. "production")
+//    ignoredBuildTypes = ["release", "Test"]                       // Android: Don't create tasks for the specified build types (e.g. "release")
+//    ignoredFlavors = ["prod","leMaineLibre","Push"]                       // Android: Don't create tasks for the specified build flavor (e.g. "production")
 //    ignoredVariants = ["productionRelease"]
     reports {
         xml {
@@ -44,7 +44,7 @@ detekt {
     }
 }
 
-def version = "167" // Android version code, is not automatic because we cannot get if for module :o(
+def version = "1" // Android version code, is not automatic because we cannot get if for module :o(
 def enableBaselineUpdate = false
 
 // Baseline only for Danger

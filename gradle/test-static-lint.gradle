@@ -76,7 +76,7 @@ android {
     }
 }
 
-def version = "167" // Android version code, is not automatic because we cannot get if for module :o(
+def version = "1" // Android version code, is not automatic because we cannot get if for module :o(
 def enableBaselineUpdate = false
 
 // Baseline only for Danger

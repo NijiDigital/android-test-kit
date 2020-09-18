@@ -1,7 +1,7 @@
 dependencies {
     // Testing
     api "androidx.annotation:annotation:1.1.0"
-    api "junit:junit:4.12"
+    api "junit:junit:4.13"
 
     // Unit testing
     api 'pl.pragmatists:JUnitParams:1.1.1'
@@ -22,6 +22,4 @@ dependencies {
 
     // Joda for testing Date wo context
     api 'joda-time:joda-time:2.10.3'
-
-    lintChecks project(":lint-kit")
 }
