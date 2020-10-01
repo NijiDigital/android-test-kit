@@ -15,8 +15,14 @@ if (localTestCoverageEnabled) {
 
     // JaCoCo settings
     jacoco {
-        toolVersion = '0.8.5'
-        reportsDir = file("$buildDir/reports/jacoco")
+        toolVersion = '0.8.6'
+    }
+
+    jacocoAndroidUnitTestReport {
+        destination "$buildDir/reports/jacoco"
+        csv.enabled true
+        html.enabled true
+        xml.enabled true
     }
 
 } else {
